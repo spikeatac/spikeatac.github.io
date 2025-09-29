@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="SpikeATac" />
+    <meta name="keywords" content="Tactile Sensing, Dexterous Manipulation, Real Robot Reinforcement Learning, On-Robot RL" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SpikeATac</title>
+
+    <link rel="icon" type="image/svg+xml" href="static/images/hedgehog_emoji.svg" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-20T0WPWX4G"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-20T0WPWX4G");
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script src="https://kit.fontawesome.com/19914a84eb.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+
+  <body>
+    <section class="hero is-link is-fullheight video" style="overflow: hidden; position: relative">
+      <div class="hero-video" style="height: 100%; display: flex; justify-content: center; align-items: center; padding: 0; margin: 0">
+        <video playsinline autoplay muted loop style="height: 100%; aspect-ratio: 16/9; object-fit: cover">
+          <source src="static/videos/teaser.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="overlay"></div>
+
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head is-hidden-mobile">
+        <header class="navbar">
+          <div class="container is-size-5">
+            <div class="navbar-menu">
+              <div class="navbar-end">
+                <a href="#video" class="navbar-item pl-4 pr-4">
+                  <span class="icon" style="margin-right: 5px">
+                    <img src="static/images/youtube.svg" alt="Youtube" />
+                  </span>
+                  <span>Video</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 10rem;">SpikeATac</h1>
+          <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem">
+            A Multimodal Tactile Finger with Taxelized Dynamic Sensing for Dexterous Manipulation
+          </h1>
+          <h2 class="is-2 is-italic is-size-5-mobile" style="font-size: 1.5rem; opacity: 95%; margin-bottom: 0.5em">
+            Anonymized Authors
+          </h2>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot is-hidden-mobile">
+        <nav class="tabs is-boxed is-fullwidth is-size-5">
+          <ul>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+
+    <section class="section" id="video">
+      <div class="container is-max-desktop">
+        <h2 class="title is-1 has-text-centered is-size-4-mobile">Supplementary Video</h2>
+        <iframe
+          width="100%"
+          style="aspect-ratio: 16 / 9"
+          src="static/videos/supp_video.mp4"
+          title=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+        
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>.
+              </p>
+              <p>
+                This website is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International License</a
+                >.
+              </p>
+              <p>
+                This means you are free to borrow and modify the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this
+                website as long as you link back to the <a href="https://nerfies.github.io/">NeRFies</a> page in the footer. Please remember to remove
+                the analytics code included in the header of the website which you do not want on your website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const sources = {
+        grasping: "./static/videos/grasping-video.mp4",
+        articulation: "./static/videos/articulation-video.mp4",
+      };
+      const demoVideo = document.getElementById("demo-video");
+      const demoSource = document.getElementById("demo-video-source");
+
+      document.getElementById("btn-grasping").addEventListener("click", function (e) {
+        e.preventDefault();
+        demoSource.src = sources.grasping;
+        demoVideo.load();
+        demoVideo.play();
+      });
+
+      document.getElementById("btn-articulation").addEventListener("click", function (e) {
+        e.preventDefault();
+        demoSource.src = sources.articulation;
+        demoVideo.load();
+        demoVideo.play();
+      });
+
+      bulmaCarousel.attach();
+    </script>
+  </body>
+</html>
